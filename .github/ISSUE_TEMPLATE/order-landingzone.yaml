@@ -8,27 +8,30 @@ body:
 - type: input
   id: system-id
   validations:
-    required: true  
+    required: true
   attributes:
     label: Your system-id created in Confluence
     description: https://dustingroup.atlassian.net/wiki/spaces/DSL/pages/2114781196/Add+a+new+System
     placeholder: infra-networks
+
 - type: input
   id: purpose
   validations:
-    required: true  
+    required: true
   attributes:
     label: What is the purpose for the landing zone?
     description: Gives a hint of how it is supposed to be used
     placeholder: infra-networks-exposed ...
+
 - type: input
   id: owner-email
   validations:
-    required: true  
+    required: true
   attributes:
     label: Owner email
     description: The email for who to contact when landing zone is created
     placeholder: firstname.lastname@dustin.com ...
+
 - type: input
   id: jira-ticket
   validations:
@@ -36,12 +39,12 @@ body:
   attributes:
     label: Jira ticket id
     description: Required for workflow | https://dustingroup.atlassian.net/jira/software/c/projects/ITIO/issues
-    placeholder: TIO-XXXX
-    
+    placeholder: ITIO-XXXX
+
 - type: dropdown
   id: environment
   attributes:
-    label: For what environment=
+    label: For what environment
     options:
       - test
       - stage
@@ -53,7 +56,7 @@ body:
 - type: dropdown
   id: landingzone-type
   attributes:
-    label: Choose your type of landing zone
+    label: Type of landing zone
     options:
       - expose-internal
       - exposed
@@ -65,7 +68,7 @@ body:
 - type: dropdown
   id: size
   attributes:
-    label: Choose your size
+    label: Network size
     options:
       - S
       - M
@@ -78,7 +81,7 @@ body:
 - type: input
   id: sizenumeric
   attributes:
-    label: Size in numeric
+    label: Network size in numeric
   validations:
     required: false
 
