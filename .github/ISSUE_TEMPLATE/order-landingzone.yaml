@@ -7,29 +7,37 @@ title: "Order Landingzone"
 body:
 - type: input
   id: system-id
+  validations:
+    required: true  
   attributes:
     label: Your system-id created in Confluence
     description: https://dustingroup.atlassian.net/wiki/spaces/DSL/pages/2114781196/Add+a+new+System
-    placeholder: example infra-aks-exposed ...
+    placeholder: infra-networks
 - type: input
   id: purpose
+  validations:
+    required: true  
   attributes:
     label: What is the purpose for the landing zone?
     description: Gives a hint of how it is supposed to be used
-    placeholder: example infra-aks-exposed ...
+    placeholder: infra-networks-exposed ...
 - type: input
   id: owner-email
+  validations:
+    required: true  
   attributes:
     label: Owner email
     description: The email for who to contact when landing zone is created
-    placeholder: name.lastname@dustin.com ..
+    placeholder: firstname.lastname@dustin.com ...
 - type: input
   id: jira-ticket
+  validations:
+    required: true
   attributes:
     label: Jira ticket id
     description: Required for workflow | https://dustingroup.atlassian.net/jira/software/c/projects/ITIO/issues
     placeholder: TIO-XXXX
-
+    
 - type: dropdown
   id: environment
   attributes:
