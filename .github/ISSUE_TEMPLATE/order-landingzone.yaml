@@ -1,0 +1,91 @@
+name: Require a landing zone 2.0?
+description: Form to create an issue for ask for a landing zone!
+labels: [order]
+
+title: "Order Landingzone"
+
+body:
+- type: input
+  id: system-id
+  attributes:
+    label: Your system-id created in Confluence
+    description: https://dustingroup.atlassian.net/wiki/spaces/DSL/pages/2114781196/Add+a+new+System
+    placeholder: example infra-aks-exposed ...
+- type: input
+  id: purpose
+  attributes:
+    label: What is the purpose for the landing zone?
+    description: Gives a hint of how it is supposed to be used
+    placeholder: example infra-aks-exposed ...
+- type: input
+  id: owner-email
+  attributes:
+    label: Owner email
+    description: The email for who to contact when landing zone is created
+    placeholder: name.lastname@dustin.com ..
+- type: input
+  id: jira-ticket
+  attributes:
+    label: Jira ticket id
+    description: Required for workflow | https://dustingroup.atlassian.net/jira/software/c/projects/ITIO/issues
+    placeholder: TIO-XXXX
+
+- type: dropdown
+  id: environment
+  attributes:
+    label: For what environment=
+    options:
+      - test
+      - stage
+      - prod
+      - sandbox
+  validations:
+    required: true
+
+- type: dropdown
+  id: landingzone-type
+  attributes:
+    label: Choose your type of landing zone
+    options:
+      - expose-internal
+      - exposed
+      - internal
+      - sandbox
+  validations:
+    required: true
+
+- type: dropdown
+  id: size
+  attributes:
+    label: Choose your size
+    options:
+      - S
+      - M
+      - L
+      - XL
+      - Other
+  validations:
+    required: true
+
+- type: input
+  id: sizenumeric
+  attributes:
+    label: Size in numeric
+  validations:
+    required: false
+
+- type: dropdown
+  id: azurelocaton
+  attributes:
+    label: Choose your location
+    options:
+      - swedencentral
+  validations:
+    required: true
+
+- type: checkboxes
+  attributes:
+    label: I acknowledge that I have created Jira Ticket and want to order a landingzone
+    options:
+      - label: Confirm
+        required: true
